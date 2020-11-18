@@ -1,0 +1,64 @@
+@import '~@/styles/common/variables';
+@import '~@/styles/common/mixins';
+
+.form {
+    width: 100%;
+
+    &--chat {
+        position: sticky;
+        top: 100%;
+    }
+
+    &__input {
+        width: 30%;
+        margin: 0.5em 0;
+        box-sizing: border-box;
+        .transition();
+
+        &:focus {
+            outline: none;
+        }
+
+        .mobile({
+            width: 100%;
+        });
+
+        &-wrapper {
+            &--horizontal {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                
+                .form__input {
+                    margin: 0 3px 0 0;
+                }
+
+                .form__btn--submit {
+                    margin: 0;
+                }
+            }
+        }
+        
+        &-description {
+            margin-top: -0.5em;
+            padding: 0 0 0 1em;
+            font-size: 10px;
+
+            .mobile({
+                font-size: 10px;
+            });
+        }
+    }
+
+    &__btn {
+        &:focus {
+            outline: none;
+        }
+
+        &--submit {
+            margin-top: 1em;
+        }
+    }
+}

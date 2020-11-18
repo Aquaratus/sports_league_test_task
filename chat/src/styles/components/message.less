@@ -1,0 +1,52 @@
+@import '~@/styles/common/variables';
+@import '~@/styles/common/mixins';
+
+.chat-msg {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    margin: 0.5em 0;
+
+    &--right {
+        flex-direction: row-reverse;
+
+        .chat-msg__message {
+            margin: 0 5px @icon-size/2 1em;
+            border-radius: 10px 10px 0 10px;
+        }
+    }
+
+    &__image {
+        min-width: @icon-size;
+        height: @icon-size;
+        border-radius: 50%;
+        background-color: @additional-color-active;
+        font-size: 8px;
+        overflow-wrap: anywhere;
+    }
+
+    &__message {
+        margin: 0 1em @icon-size/2 5px;
+        padding: 0.6em 1em;
+        box-sizing: border-box;
+        border-radius: 10px 10px 10px 0;
+        background-color: @additional-color;
+
+        &--author {
+            background-color: @additional-color-active;
+        }
+
+        &-header {
+            font-size: 15px;
+            margin: 0 0 0.3em 0;
+            overflow-wrap: anywhere;
+        }
+
+        &-text {
+            margin: 0;
+            padding: 0;
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+    }
+}

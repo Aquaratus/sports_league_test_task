@@ -1,0 +1,9 @@
+@import '~@/styles/common/variables';
+
+.mobile(@rules) {
+    @media (max-width: @max-width-mobile) { @rules(); };
+}
+
+.transition() {
+    transition: @transition-time @transition-timing;
+}
